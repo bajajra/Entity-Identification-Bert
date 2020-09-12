@@ -1,5 +1,8 @@
 .vscode/
 input/
+*.pyc
 *.bin
 *.csv
 *.jpg
+*.DS_Store
+__pycache__/

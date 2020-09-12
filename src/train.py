@@ -10,10 +10,10 @@ from sklearn import model_selection
 from transformers import AdamW
 from transformers import get_linear_schedule_with_warmup
 
-from . import config
-from . import dataset
-from . import engine
-from .model import EntityModel
+import config
+import dataset
+import engine
+from model import EntityModel
 
 
 def process_data(data_path):
@@ -72,6 +72,7 @@ if __name__ == "__main__":
 
     device = torch.device("cuda")
     model = EntityModel(num_tag=num_tag, num_pos=num_pos)
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model.to(device)
 
     param_optimizer = list(model.named_parameters())

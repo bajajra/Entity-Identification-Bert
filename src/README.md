@@ -1,4 +1,4 @@
 ## Instructions for Entity Extraction Component
 
-#### Tokenizer: Transformers
-#### Pre-Trained Model: Bert Base Uncased
+#### Tokenizer: Transformer.BertTokenizer
+#### Pre-Trained Model: Bert-Base Uncased (for case sensitive use Cased)

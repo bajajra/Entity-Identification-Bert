@@ -1,10 +1,10 @@
-from . import config
+import config
 import torch
 
 
 class EntityDataset:
     def __init__(self, texts, pos, tags):
-        # texts: [["hi", ",", "my", "name", "is", "abhishek"], ["hello".....]]
+        # texts: [["hi", ",", "my", "name", "is", "rahul"], ["hello".....]]
         # pos/tags: [[1 2 3 4 1 5], [....].....]]
         self.texts = texts
         self.pos = pos
@@ -27,7 +27,6 @@ class EntityDataset:
                 s,
                 add_special_tokens=False
             )
-            # abhishek: ab ##hi ##sh ##ek
             input_len = len(inputs)
             ids.extend(inputs)
             target_pos.extend([pos[i]] * input_len)
