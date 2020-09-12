@@ -19,7 +19,7 @@ if __name__ == "__main__":
     num_tag = len(list(enc_tag.classes_))
 
     sentence = """
-    abhishek is going to india
+    rahul is going to india
     """
     tokenized_sentence = config.TOKENIZER.encode(sentence)
 
