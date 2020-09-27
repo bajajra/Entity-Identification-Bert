@@ -19,7 +19,7 @@ if __name__ == "__main__":
     num_tag = len(list(enc_tag.classes_))
 
     sentence = """
-    rahul is going to india
+    I'd like to have this track onto my Classical Relaxations playlist.
     """
     tokenized_sentence = config.TOKENIZER.encode(sentence)
 
