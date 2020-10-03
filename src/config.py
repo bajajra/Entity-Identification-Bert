@@ -7,7 +7,7 @@ EPOCHS = 5
 BASE_MODEL_PATH = "input/bert_base_uncased"
 MODEL_PATH = "model.bin"
 TRAINING_FILE = "input/dataset.csv"
-JSON_FILE = ""
+JSON_FILE = "input/JsonDataFiles/"
 TOKENIZER = transformers.BertTokenizer.from_pretrained(
     BASE_MODEL_PATH,
     do_lower_case = True
