@@ -18,7 +18,7 @@ def bert_token_reconstruct(resultTags, bert_tokens):
 
         try:
             if bert_tokens[i][0] == '#' and bert_tokens[i][1] == '#':
-                finalTokens = finalTokens[-1] + bert_tokens[i][2:]
+                finalTokens[-1] = finalTokens[-1] + bert_tokens[i][2:]
                 continue
         except:
             pass
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     num_tag = len(list(enc_tag.classes_))
 
     sentence = """
-    Play all of me by john legend
+    Play all of me by rahul
     """
     tokenized_sentence = config.TOKENIZER.encode(sentence)
 
@@ -85,8 +85,8 @@ if __name__ == "__main__":
         # )
 
         print(bert_token_reconstruct(resultTags, bert_tokens))
-        print(
-            enc_pos.inverse_transform(
-                pos.argmax(2).cpu().numpy().reshape(-1)
-            )[:len(tokenized_sentence)]
-        )
+        # print(
+        #     enc_pos.inverse_transform(
+        #         pos.argmax(2).cpu().numpy().reshape(-1)
+        #     )[:len(tokenized_sentence)]
+        # )
